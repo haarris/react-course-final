@@ -1,0 +1,83 @@
+//Notes
+
+Goal: Finish it all by end of this week (Fri-Sun). Bismillah.
+Properly w/ notes and comments for reference in retrospective.
+
+Course will focus on:
+    -   React Basics
+    -   React Router
+    -   Firebase
+    -   Redux
+    -   Testing
+    -   Progressive Web Apps (PWA)
+    -   Payments (Stripe API/Backend)
+
+    -   Redux-Saga
+    -   Performance
+    -   Hooks
+    -   Context API
+    -   GraphQL
+
+React theory:
+    -   React is a frontend library for
+
+    -   Pre-React webdev landscape:
+
+
+    -   Declarative Paradigm (vs Imperative):
+
+    -   Component Architecture:
+
+    -   One Way Data Flow:
+
+    -   UI Library:
+
+    -   How to be a GREAT React developer:
+        We understand how to be a great developer for React
+        by UNDERSTANDING the actual concepts behind the utility
+        behind React. 
+
+        "React is a Declarative paradigm (we don't tell our Apps
+        exactly what to do), rather we give it a State, some 
+        Components through JSX with some Props(erties), give all
+        that information a giant JS Object in a Declarative way
+        which creates a VirtualDOM that the ReactJS library utilises 
+        to update the DOM."
+
+        Senior React Developers focus on:
+        1) 'Decide well on Components', breaking down things into 
+        different components
+        2) 'Decide the State and where it lives', decide appropriately
+        what its location is, where it 'lives'
+        3) 'What changes when State changes', what part of the 
+        VirtualDOM changes via what change in the State
+
+
+Important NPM commands:
+    -   Install dependencies from package.json 
+        npm install
+    -   Install a package and add to package.json
+        npm install package --save
+    -   Install a devDependency to package.json
+        npm install package --save-dev 
+    -   Remove a dependency from package.json 
+        npm uninstall package --save
+    -   Install a package globally
+        npm install package -g
+
+    -   npm start
+    -   npm run build = convert into static files 
+    
+
+NPM and Yarn are two package managers. 
+
+Create-react-app:
+    -   Developed by Facebook to help new developers with React
+    -   React is actually developed in a further along JS standard 
+    compared to our browsers' JS
+    -   Babel (makes sure browser compatibility) and 
+    Webpack (makes sure optimisation) take the React 
+    JS we write and converts it into a browser friendly readable code 
+
+
+
