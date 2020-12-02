@@ -1,10 +1,22 @@
 
     Webdev Todos:
     -   Go through the React official documentation/tutorial https://reactjs.org/docs/create-a-new-react-app.html
-    -   
-
+    -   Goodreads HTML widgets AND then API[1]
+    -   Will Kwan's tutorial do w/ adjustments and note-taking: (i.e. sole Linux, )
+        https://www.youtube.com/watch?v=HmyMFZQDWyU, DM him on Twitter[2]
+        Read his interview: https://www.indiehackers.com/interview/90b962c232
 
 
     Advanced: 
     -   https://www.amazon.com.au/Douglas-Crockford/e/B002N3VYB6/ref=dp_byline_cont_book_1
     -   
+
+
+Footnotes:
+
+[1] "If you go to Account settings on GR, there's a Widgets tab
+    which has lots of widgets for putting in your blog and stuff.
+    I just copied the URL from the quote widget and put it inside
+    a script, which is in turn called by a program that displays 
+    information on the desktop" @nhp via Discord (show and tell)
+[2]"Feel free to send me a DM on Twitter to get some code feedback"

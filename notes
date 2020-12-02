@@ -80,4 +80,11 @@ Create-react-app:
     JS we write and converts it into a browser friendly readable code 
 
 
+/*
+  - Two ways of developing components: functions or classes
+  - Structure your app properly (architecture), 'components' folder
+  and within explictly labelling .jsx and .css where relevant
+
+
+*/
 
