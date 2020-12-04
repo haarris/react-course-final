@@ -55,14 +55,19 @@ React theory:
 
 Important NPM commands:
     -   Install dependencies from package.json 
+
         npm install
     -   Install a package and add to package.json
+
         npm install package --save
     -   Install a devDependency to package.json
+
         npm install package --save-dev 
     -   Remove a dependency from package.json 
+
         npm uninstall package --save
     -   Install a package globally
+
         npm install package -g
 
     -   npm start
@@ -80,11 +85,9 @@ Create-react-app:
     JS we write and converts it into a browser friendly readable code 
 
 
-/*
   - Two ways of developing components: functions or classes
   - Structure your app properly (architecture), 'components' folder
   and within explictly labelling .jsx and .css where relevant
 
-
-*/
-
+Components: 
+    -   Are modular 
