@@ -91,3 +91,57 @@ Create-react-app:
 
 Components: 
     -   Are modular 
+
+
+Unidirectional Data Flow: 
+    -   Incredibly important in React
+    -   Actual DOM tree vs Virtual DOM tree (react), React uses the 
+    latter for more efficiency, can just target specific nodes instead
+    of entire tree, hence we see in real-time it renders only specific
+    relevant nodes (i.e. searchbox when typing)
+    -   State -> Views -> Actions 
+        ^ The model React follows, whatever is updated in the State
+        updates in the Views, to which whatever the User clicks on any 
+        Action changes the State and the Views get updated etc...
+    -   If Data however is NOT situated in State but in one of the 
+        components (i.e. a Node that branches out), then React uses this 
+        Data here to update the Views (but this is not following the 
+        spirit of the concept, still does Unidirectional however)
+
+State is Async: 
+    -   So whenever State gets updated or changed through a function or 
+        whatever, it is done so in an Async fashion, the ReactJS library 
+        will decide when it will update. So if you have a function afterwards
+        console.logging the State, there may a 'lag' between the two. 
+    -   If you want to get around this, simply do a error handling 
+        Callback function 
+        inside the actual function, which will have no lag
+
+    handleClick  = () => {
+        this.setState({ meaningOfLife: this.state.meaningOfLife + 1},
+            () => console.log(this.state.meaningOfLife)) 
+            //using arrow fns to avoid saying 'return' 
+    }
+
+    -   If we're interacting directly with this.state in a setState method:
+        there's no guarantee you might get a previous/current state or 
+        hence: 
+
+    handleClick  = () => {
+        this.setState((prevState, prevProps) => {
+            return meaningOfLife: prevState.meaningOfLife + prevProps.increment} //[1]
+        },
+            () => console.log(this.state.meaningOfLife)) 
+    }
+
+    We can use prevState to gurantee that'll be the latest previous state
+    before the update. Use a function instead of an object!
+
+    [1] Why not:
+        ({return meaningOfLife: this.state.meaningOfLife + 1})
+    The ({}) the normal brackets are replacement of 'return' 
+    And prevState = this.state (gurantee of prev state)
+    Same thing for prevProps (except you adjust by adding an actual Props
+    within the Index.js for App component) instead of + 1
+    Also good practise to put the 'props' in the constructor and super()
+    because in case we use props in there     
