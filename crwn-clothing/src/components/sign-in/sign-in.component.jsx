@@ -5,7 +5,7 @@ import FormInput from '../form-input/form-input.component';
 import './sign-in.styles.scss';
 import CustomButton from '../../components/custom-button/custom-button.component';
 
-import { signInWithGoogle } from '../../firebase/firebase.utils';
+import { auth, signInWithGoogle } from '../../firebase/firebase.utils';
 class SignIn extends React.Component {
     constructor(props) {
         super(props);
@@ -16,16 +16,23 @@ class SignIn extends React.Component {
         }
     }
 
-    handleSubmit = event => {
+    handleSubmit = async event => {
         event.preventDefault();
 
-        this.setState({ email: '', password: ''});
+        const { email, password } = this.state;
+
+        try {
+            await auth.signInWithEmailAndPassword(email, password);
+            this.setState({ email: '', password: '' });
+        } catch (error) {
+            console.log(error);
+        }
     };
 
     handleChange = event => {
         const { value, name} = event.target;
-//'pulling' our value and name variable inputs from the specific event to 
-//the state
+        //'pulling' our value and name variable inputs from the specific event to 
+        //the state
         this.setState({ [name]: value });
         //if the 'name' is either 'password' or 'email' 
         //and value is anything but always corresponding binarily to either
